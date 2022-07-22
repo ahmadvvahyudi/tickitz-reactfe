@@ -30,7 +30,7 @@ export const Navbar = () => {
             <hr />
 
             <li className="nav-item mt-5">
-              <Link className="nav-link" to={''}>&copy; 2020 Tickitz • All Rights Reserved.</Link>
+              <Link className="nav-link" to={''}>&copy; 2022 Tickitz • All Rights Reserved.</Link>
             </li>
           </ul>
         </div>

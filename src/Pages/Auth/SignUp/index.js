@@ -1,26 +1,47 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import "../../../style.css"
 
-
-const SignIn = () => {
+const SignUp = () => {
 	return (
 		<>
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-6 d-none d-md-block image-container">
-						<div className="title-sign-in">
-							<img src="./assets/images/tickitz-white.svg" alt="logo" />
-							<h1>wait, watch, wow!</h1>
+					<div
+						className="col-md-6 d-none d-md-block image-container"
+						style={{
+							backgroundImage: `linear-gradient(rgba(43, 21, 107, 0.8), rgba(43, 21, 107, 0.8)), url(../../../assets/images/image-bg.jpg)`,
+						}}
+					>
+						<div className="title-register">
+							<img src="./assets/images/tickitz-white.svg" alt="" />
+							<h1>Lets build your account</h1>
+							<p>
+								To be a loyal moviegoer and access all of features, your details
+								are required
+							</p>
+							<div className="custom-progress">
+								<ul>
+									<li>
+										<span className="active">1</span>
+										<div className="progres">Fill your additional details</div>
+									</li>
+									<li>
+										<span>2</span>
+										<div className="progres">Active your account</div>
+									</li>
+									<li>
+										<span>3</span>
+										<div className="progres">Done</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-					<div className="col-md-6 form-container-sign-in">
-						<form className="form-box" action="index.html">
+					<div className="col-md-6 form-container-register">
+						<form className="form-box" action="sign_in.html">
 							<div className="mb-4">
-								<h3>Sign In</h3>
-								<p>
-									Sign in with your data that you entered during your
-									registration
-								</p>
+								<h3>Fill your additional details</h3>
 							</div>
 							<div className="mb-3 form-input">
 								<label htmlFor="exampleInputEmail1" className="form-label">
@@ -45,12 +66,22 @@ const SignIn = () => {
 									placeholder="Write your password"
 								/>
 							</div>
+							<div className="mb-3 form-check">
+								<input
+									type="checkbox"
+									className="form-check-input"
+									id="exampleCheck1"
+								/>
+								<label className="form-check-label" htmlFor="exampleCheck1">
+									I agree to terms &amp; conditions
+								</label>
+							</div>
 							<button type="submit" className="btn btn-join-now py-3 mb-4">
-								Sign In
+								Join for free now
 							</button>
 							<div className="text-center link mb-4">
-								Forgot your password?
-								<Link to="forgot_password.html">Reset now</Link>
+								Do you already have an account?
+								<Link to="sign_in.html">Log In</Link>
 							</div>
 							<h6>
 								<span>Or</span>
@@ -85,4 +116,4 @@ const SignIn = () => {
 		</>
 	)
 }
-export default SignIn
+export default SignUp
